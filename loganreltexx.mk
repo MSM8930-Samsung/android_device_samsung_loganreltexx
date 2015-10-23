@@ -126,6 +126,15 @@ PRODUCT_PACKAGES += \
     ebtables \
     ethertypes
 
+# F2FS
+PRODUCT_PACKAGES += \
+    fsck.f2fs \
+    mkfs.f2fs
+
+# Samsung symbols
+PRODUCT_PACKAGES += \
+    libsamsung_symbols
+
 # GPS/location security configuration file
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/sec_config:system/etc/sec_config
