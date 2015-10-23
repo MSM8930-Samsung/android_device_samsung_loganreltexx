@@ -26,7 +26,7 @@
 TARGET_SPECIFIC_HEADER_PATH := device/samsung/loganreltexx/include
 
 # Kernel
-BOARD_KERNEL_CMDLINE         := androidboot.hardware=qcom user_debug=23 zcache androidboot.bootdevice=msm_sdcc.1
+BOARD_KERNEL_CMDLINE         := androidboot.hardware=qcom user_debug=23 zcache androidboot.bootdevice=msm_sdcc.1 androidboot.selinux=permissive
 BOARD_KERNEL_BASE            := 0x80200000
 BOARD_MKBOOTIMG_ARGS         := --ramdisk_offset 0x02000000
 BOARD_KERNEL_PAGESIZE        := 2048
@@ -80,10 +80,14 @@ BOARD_CHARGER_SHOW_PERCENTAGE := true
 BOARD_CHARGING_MODE_BOOTING_LPM := /sys/class/power_supply/battery/batt_lp_charging
 
 # Enable QCOM FM feature
-AUDIO_FEATURE_ENABLED_FM := true
-QCOM_FM_ENABLED := true
-BOARD_USES_SEPERATED_FM := true
-TARGET_QCOM_NO_FM_FIRMWARE := false
+#AUDIO_FEATURE_ENABLED_FM := true
+#QCOM_FM_ENABLED := true
+#BOARD_USES_SEPERATED_FM := true
+#TARGET_QCOM_NO_FM_FIRMWARE := false
+
+# Allow suspend in charge mode
+BOARD_CHARGER_ENABLE_SUSPEND := true
+BOARD_CHARGER_SHOW_PERCENTAGE := true
 
 # Camera
 TARGET_NEED_DISABLE_AUTOFOCUS := true
