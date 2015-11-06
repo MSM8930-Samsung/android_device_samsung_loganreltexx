@@ -42,6 +42,9 @@ TARGET_OTA_ASSERT_DEVICE := loganreltexx,loganrelte,GT-S7275R,GT-S7275B,GT-S7275
 # Recovery
 TARGET_RECOVERY_FSTAB := device/samsung/loganreltexx/rootdir/fstab.qcom
 
+# Reduce space taken by the journal
+BOARD_SYSTEMIMAGE_JOURNAL_SIZE := 0
+
 # Partition sizes
 TARGET_USERIMAGES_USE_EXT4 := true
 BOARD_BOOTIMAGE_PARTITION_SIZE := 10485760
