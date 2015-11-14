@@ -137,9 +137,9 @@ PRODUCT_PACKAGES += \
     fsck.f2fs \
     mkfs.f2fs
 
-# Samsung symbols
+# RIL
 PRODUCT_PACKAGES += \
-    libsamsung_symbols
+    libril_shim
 
 # GPS/location security configuration file
 PRODUCT_COPY_FILES += \
