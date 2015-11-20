@@ -107,14 +107,18 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/prebuilt/Eleven.apk:system/app/Eleven/Eleven.apk
 
-# GPS HAL
-PRODUCT_PACKAGES += \
-    gps.msm8960
+# GPS/location security configuration file
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/configs/sec_config:system/etc/sec_config
 
 # GPS config
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/gps.conf:system/etc/gps.conf \
     $(LOCAL_PATH)/configs/sap.conf:system/etc/sap.conf
+
+# GPS HAL
+PRODUCT_PACKAGES += \
+    gps.msm8960
 
 # FM radio
 #PRODUCT_PACKAGES += \
@@ -140,10 +144,6 @@ PRODUCT_PACKAGES += \
 # RIL
 PRODUCT_PACKAGES += \
     libril_shim
-
-# GPS/location security configuration file
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/configs/sec_config:system/etc/sec_config
 
 # call common loganre system props
 $(call inherit-product, device/samsung/loganreltexx/system_prop.mk)
