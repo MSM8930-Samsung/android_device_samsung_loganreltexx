@@ -23,6 +23,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
     persist.rild.nitz_short_ons_3="" \
     ril.subscription.types=NV,RUIM \
     ro.telephony.ril_class=LoganreRIL \
+    ro.ril.telephony.mqanelements=6 \
     persist.radio.add_power_save=1
 
 # GPS
