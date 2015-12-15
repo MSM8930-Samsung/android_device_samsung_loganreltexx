@@ -31,7 +31,7 @@ import java.util.ArrayList;
 import java.util.Collections;
 
 /**
- * RIL customization for Galaxy Ace 3 (GSM) devices
+ * RIL customization for Galaxy Ace 3 LTE (GSM) devices
  *
  * {@hide}
  */
@@ -44,9 +44,8 @@ public class LoganreRIL extends RIL {
     private static final int RIL_UNSOL_WB_AMR_STATE = 11017;
     private static final int RIL_UNSOL_RESPONSE_HANDOVER = 11021;
 
-
-    public LoganreRIL(Context context, int networkModes, int cdmaSubscription) {
-        this(context, networkModes, cdmaSubscription, null);
+    public LoganreRIL(Context context, int preferredNetworkType, int cdmaSubscription) {
+        this(context, preferredNetworkType, cdmaSubscription, null);
     }
 
     public LoganreRIL(Context context, int preferredNetworkType,
