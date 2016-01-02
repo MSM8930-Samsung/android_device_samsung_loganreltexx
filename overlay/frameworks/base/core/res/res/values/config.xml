@@ -266,6 +266,11 @@
 
     <string translatable="false" name="config_radio_access_family">GSM|WCDMA|LTE</string>
 
+    <!-- Ambient display. -->
+    <integer name="config_screenBrightnessDoze">30</integer>
+    <string name="config_dozeComponent">com.android.systemui/com.android.systemui.doze.DozeService</string>
+    <bool name="config_dozeAfterScreenOff">true</bool>
+
     <!-- Ultrasound support for Mic/speaker path -->
     <!-- Whether the default microphone audio source supports near-ultrasound frequencies
          (range of 18 - 21 kHz). -->
