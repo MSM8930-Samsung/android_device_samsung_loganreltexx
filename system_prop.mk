@@ -79,42 +79,4 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 # Low-RAM optimizations
 ADDITIONAL_BUILD_PROPERTIES += \
-	ro.config.low_ram=true \
-	persist.sys.force_highendgfx=true \
-	dalvik.vm.jit.codecachesize=0 \
 	config.disable_atlas=true \
-	ro.sys.fw.bg_apps_limit=16
-
-# Trim properties
-PRODUCT_PROPERTY_OVERRIDES += \
-	ro.sys.fw.use_trim_settings=true \
-	ro.sys.fw.empty_app_percent=50 \
-	ro.sys.fw.trim_empty_percent=100 \
-	ro.sys.fw.trim_cache_percent=100 \
-	ro.sys.fw.trim_enable_memory=900775936
-
-# Enable B service adj transition by default
-PRODUCT_PROPERTY_OVERRIDES += \
-	ro.sys.fw.bservice_enable=true \
-	ro.sys.fw.bservice_limit=5 \
-	ro.sys.fw.bservice_age=5000 \
-
-# Performance and battery tweaks
-PRODUCT_PROPERTY_OVERRIDES += \
-    ro.ril.disable.power.collapse=0 \
-    debug.performance.tuning=1 \
-    video.accelerate.hw=1 \
-    debug.sf.hw=1 \
-    persist.sys.ui.hw=true \
-    ro.media.dec.jpeg.memcap=8000000 \
-    ro.media.enc.jpeg.quality=100 \
-    pm.sleep_mode=1 \
-    ro.mot.eri.losalert.delay=500 \
-    wifi.supplicant_scan_interval=180 \
-    ro.max.fling_velocity=25000 \
-    ro.min.fling_velocity=12000 \
-    windowsmgr.max_events_per_sec=150 \
-    persist.service.lgospd.enable=0 \
-    persist.service.pcsync.enable=0 \
-    ro.hwui.text_cache_width=2048 \
-    ro.hwui.text_cache_height=256
