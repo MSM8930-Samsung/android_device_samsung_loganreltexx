@@ -147,6 +147,9 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     SamsungDoze
 
+# Camera
+PRODUCT_PACKAGES += \
+    Snap
 
 # call common loganre system props
 $(call inherit-product, device/samsung/loganreltexx/system_prop.mk)
