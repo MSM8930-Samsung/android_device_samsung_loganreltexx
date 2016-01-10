@@ -102,6 +102,3 @@ BOARD_RIL_CLASS := ../../../device/samsung/loganreltexx/ril/
 
 # CMHW
 BOARD_HARDWARE_CLASS := $(LOCAL_PATH)/cmhw
-
-# Odex ROM for performance
-WITH_DEXPREOPT := true
