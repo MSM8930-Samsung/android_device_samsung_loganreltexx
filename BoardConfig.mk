@@ -89,3 +89,6 @@ BOARD_RIL_CLASS := ../../../device/samsung/loganreltexx/ril/
 
 # CMHW
 BOARD_HARDWARE_CLASS := device/samsung/loganreltexx/cmhw
+
+# Legacy MMAP for pre-lollipop blobs
+BOARD_USES_LEGACY_MMAP := true
