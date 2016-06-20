@@ -92,3 +92,6 @@ BOARD_HARDWARE_CLASS := device/samsung/loganreltexx/cmhw
 
 # Legacy MMAP for pre-lollipop blobs
 BOARD_USES_LEGACY_MMAP := true
+
+# Odex ROM for performance
+WITH_DEXPREOPT := true
