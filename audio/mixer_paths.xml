@@ -290,7 +290,7 @@
     </path>
 
     <path name="headset-mic">
-        <path name="adc2" />
+        <path name="adc1" />
         <ctl name="ADC2 Volume" value="15" />
         <ctl name="DEC4 Volume" value="84" />
     </path>
@@ -311,7 +311,7 @@
     </path>
 
     <path name="voice-speaker-mic">
-        <path name="adc3" />
+        <path name="adc1" />
         <ctl name="ADC3 Volume" value="12" />
         <ctl name="DEC4 Volume" value="84" />
     </path>
@@ -392,13 +392,13 @@
     </path>
 
     <path name="voip-sub-mic-comm">
-        <path name="adc3" />
+        <path name="adc1" />
         <ctl name="ADC3 Volume" value="12" />
         <ctl name="DEC4 Volume" value="84" />
     </path>
 
     <path name="voip-headset-mic-comm">
-        <path name="adc2" />
+        <path name="adc1" />
         <ctl name="ADC2 Volume" value="12" />
         <ctl name="DEC4 Volume" value="84" />
     </path>
