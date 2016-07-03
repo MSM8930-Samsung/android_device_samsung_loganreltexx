@@ -63,7 +63,6 @@ BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := device/samsung/loganreltexx/bluet
 #BOARD_NFC_LPM_LOSES_CONFIG := true
 
 # Audio
-AUDIO_USE_LL_AS_PRIMARY_OUTPUT := true
 USE_CUSTOM_AUDIO_POLICY := 1
 
 # Needed for LPA
