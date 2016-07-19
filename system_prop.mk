@@ -67,9 +67,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 # Art
 PRODUCT_PROPERTY_OVERRIDES += \
-    dalvik.vm.image-dex2oat-filter=everything \
-    dalvik.vm.dex2oat-filter=everything \
-    dalvik.vm.dex2oat-flags=--no-watch-dog
+    dalvik.vm.dex2oat-flags=--no-watch-dog \
 
 # Low-RAM optimizations
 ADDITIONAL_BUILD_PROPERTIES += \
