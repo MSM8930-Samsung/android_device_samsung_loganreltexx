@@ -1,3 +1,4 @@
+
 # Copyright (C) 2014 The CyanogenMod Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
@@ -61,6 +62,9 @@ BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := device/samsung/loganreltexx/bluet
 #BOARD_HAVE_NFC := true
 #BOARD_NFC_CHIPSET := pn547
 #BOARD_NFC_LPM_LOSES_CONFIG := true
+
+# Charger
+BOARD_NO_CHARGER_LED := true
 
 # Audio
 USE_CUSTOM_AUDIO_POLICY := 1
