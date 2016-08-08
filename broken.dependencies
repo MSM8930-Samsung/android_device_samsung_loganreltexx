@@ -3,13 +3,13 @@
     "remote": "github",
     "repository": "MSM8930-Samsung/android_device_samsung_loganreltexx",
     "target_path": "device/samsung/loganreltexx",
-    "branch": "mm6.0"
+    "branch": "broken6"
   },
   {
     "remote": "github",
     "repository": "MSM8930-Samsung/android_device_samsung_msm8930-common",
     "target_path": "device/samsung/msm8930-common",
-    "branch": "mm6.0"
+    "branch": "broken6"
   },
   {
     "remote": "github",

@@ -1,1 +1,1 @@
-add_lunch_combo slim_loganreltexx-userdebug
+add_lunch_combo broken_loganreltexx-userdebug
