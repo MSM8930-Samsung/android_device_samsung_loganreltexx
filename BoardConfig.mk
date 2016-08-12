@@ -26,14 +26,15 @@
 
 TARGET_SPECIFIC_HEADER_PATH := device/samsung/loganreltexx/include
 
-BOARD_KERNEL_CMDLINE         := androidboot.hardware=qcom user_debug=22 zcache msm_rtb.filter=0x3F ehci-hcd.park=3 androidboot.bootdevice=msm_sdcc.1
-BOARD_KERNEL_BASE            := 0x80200000
-BOARD_MKBOOTIMG_ARGS         := --ramdisk_offset 0x02000000
-BOARD_KERNEL_PAGESIZE        := 2048
-TARGET_KERNEL_SOURCE         := kernel/samsung/msm8930-common
-TARGET_KERNEL_CONFIG         := cyanogen_loganre_defconfig
+BOARD_KERNEL_CMDLINE := androidboot.hardware=qcom user_debug=22 zcache msm_rtb.filter=0x3F ehci-hcd.park=3 androidboot.bootdevice=msm_sdcc.1
+BOARD_KERNEL_BASE := 0x80200000
+BOARD_MKBOOTIMG_ARGS := --ramdisk_offset 0x02000000
+BOARD_KERNEL_PAGESIZE := 2048
+TARGET_KERNEL_SOURCE := kernel/samsung/msm8930-common
+TARGET_KERNEL_CONFIG := cyanogen_loganre_defconfig
 TARGET_KERNEL_VARIANT_CONFIG := msm8930_loganre_eur_lte_defconfig
 
+# Bootloader
 TARGET_BOOTLOADER_BOARD_NAME := MSM8960
 
 # Assert
@@ -42,15 +43,13 @@ TARGET_OTA_ASSERT_DEVICE := loganreltexx,loganrelte,GT-S7275R,GT-S7275B,GT-S7275
 # Recovery
 TARGET_RECOVERY_FSTAB := device/samsung/loganreltexx/rootdir/fstab.qcom
 
-# Reduce space taken by the journal
-BOARD_SYSTEMIMAGE_JOURNAL_SIZE := 0
-
-# Partition sizes
+# Filesystem
 TARGET_USERIMAGES_USE_EXT4 := true
 TARGET_USERIMAGES_USE_F2FS := true
 BOARD_BOOTIMAGE_PARTITION_SIZE := 10485760
 BOARD_RECOVERYIMAGE_PARTITION_SIZE := 10485760
 BOARD_SYSTEMIMAGE_PARTITION_SIZE := 1698693120
+BOARD_SYSTEMIMAGE_JOURNAL_SIZE := 0
 BOARD_USERDATAIMAGE_PARTITION_SIZE := 5693733888
 BOARD_CACHEIMAGE_PARTITION_SIZE := 209715200
 BOARD_FLASH_BLOCK_SIZE := 131072
