@@ -15,7 +15,7 @@
     "remote": "github",
     "repository": "MSM8930-Samsung/android_device_samsung_qcom-common",
     "target_path": "device/samsung/qcom-common",
-    "branch": "cm-13.0"
+    "branch": "mm6.0"
   },
   {
     "remote": "github",
