@@ -99,3 +99,6 @@ BOARD_USES_LEGACY_MMAP := true
 # Enable dex pre-optimization with PIC
 WITH_DEXPREOPT := true
 WITH_DEXPREOPT_PIC := true
+
+# Bionic
+MALLOC_SVELTE := true
