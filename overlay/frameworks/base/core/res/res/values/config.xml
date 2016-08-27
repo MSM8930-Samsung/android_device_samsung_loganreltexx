@@ -151,6 +151,10 @@
          Also, the battery stats are flushed to disk when we hit this level.  -->
     <integer name="config_criticalBatteryWarningLevel">5</integer>
 
+    <!-- Minimum screen brightness setting allowed by the power manager.
+         The user is forbidden from setting the brightness below this level. -->
+    <integer name="config_screenBrightnessSettingMinimum">5</integer>
+
     <!-- Boolean indicating if current platform supports bluetooth wide band
          speech -->
     <bool name="config_bluetooth_wide_band_speech">false</bool>
