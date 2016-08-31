@@ -102,7 +102,7 @@
 /dev/pn544                0660   nfc        nfc
 /dev/pn547                0660   nfc        nfc
 
-#permissions for audio
+# permissions for audio
 /dev/msm_qcelp            0660   system     audio
 /dev/msm_evrc             0660   system     audio
 /dev/msm_wma              0660   system     audio
@@ -129,6 +129,7 @@
 /dev/msm_sps              0660   system     audio
 /dev/msm_voicememo        0660   system     audio
 /dev/audience_a2220       0660   system     audio
+
 /dev/smd3                 0660   bluetooth  net_bt_stack
 /dev/smd2                 0660   bluetooth  net_bt_stack
 /dev/ttyHSL0              0660   radio      system
@@ -177,3 +178,6 @@
 
 # permission for dun
 /dev/dun                  0660   system     system
+
+# fastrpc permission setting
+/dev/adsprpc-smd          0664   system     system
