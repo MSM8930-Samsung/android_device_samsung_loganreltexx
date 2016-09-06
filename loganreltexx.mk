@@ -157,6 +157,10 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     SlimFileManager
 
+# CyanogenMod SoundRecorder
+PRODUCT_PACKAGES += \
+    SoundRecorder
+
 # call common loganre system props
 $(call inherit-product, device/samsung/loganreltexx/system_prop.mk)
 
