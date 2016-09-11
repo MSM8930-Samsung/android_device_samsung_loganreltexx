@@ -12,10 +12,8 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-$(call inherit-product, $(SRC_TARGET_DIR)/product/languages_full.mk)
-
-# Also get non-open-source specific aspects if available
-$(call inherit-product-if-exists, vendor/samsung/loganreltexx/loganreltexx-vendor.mk)
+# Also get non-open-source specific aspects
+$(call inherit-product, vendor/samsung/loganreltexx/loganreltexx-vendor.mk)
 
 # Common overlay
 DEVICE_PACKAGE_OVERLAYS += device/samsung/loganreltexx/overlay
@@ -108,10 +106,6 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/rootdir/system/etc/init.qcom.bt.sh:system/etc/init.qcom.bt.sh \
     $(LOCAL_PATH)/rootdir/system/etc/init.qcom.fm.sh:system/etc/init.qcom.fm.sh
 
-# Eleven
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/prebuilt/Eleven.apk:system/app/Eleven/Eleven.apk
-
 # GPS/location security configuration file
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/sec_config:system/etc/sec_config
@@ -128,7 +122,6 @@ PRODUCT_PACKAGES += \
 # FM radio
 PRODUCT_PACKAGES += \
     FM2 \
-    libqcomfm_jni \
     qcom.fmradio
 
 # Lights
