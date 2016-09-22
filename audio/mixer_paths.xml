@@ -286,7 +286,7 @@
         <ctl name="PRI_TX Channels" value="One" />
         <ctl name="AIF1_CAP Mixer SLIM TX1" value="1" />
         <ctl name="SLIM TX1 MUX" value="DEC4" />
-        <ctl name="DEC4 MUX" value="ADC2" />
+        <ctl name="DEC4 MUX" value="ADC3" />
     </path>
 
     <path name="spk">
@@ -338,7 +338,7 @@
     </path>
 
     <path name="headset-mic">
-        <path name="adc1" />
+        <path name="adc2" />
         <ctl name="ADC2 Volume" value="15" />
         <ctl name="DEC4 Volume" value="84" />
     </path>
@@ -432,13 +432,13 @@
     </path>
 
     <path name="voip-sub-mic-comm">
-        <path name="adc1" />
+        <path name="adc3" />
         <ctl name="ADC3 Volume" value="12" />
         <ctl name="DEC4 Volume" value="84" />
     </path>
 
     <path name="voip-headset-mic-comm">
-        <path name="adc1" />
+        <path name="adc2" />
         <ctl name="ADC2 Volume" value="12" />
         <ctl name="DEC4 Volume" value="84" />
     </path>
