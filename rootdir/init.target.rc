@@ -34,6 +34,7 @@ on early-init
     chown system system /sys/kernel/debug/kgsl/proc
     mkdir /efs 0771 system radio
     chmod 644 /proc/cmdline
+    write /sys/devices/virtual/graphics/fb0/rgb "32768 32768 32768"
 
     # disable swap page clustering -- recommended in https://source.android.com/devices/low-ram.html
     write /proc/sys/vm/page-cluster 0
