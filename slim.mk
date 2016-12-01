@@ -24,9 +24,8 @@ $(call inherit-product, vendor/slim/config/common_full_phone.mk)
 # Misc missing apps
 PRODUCT_PACKAGES += \
     Browser \
-    Messaging \
+    messaging \
     SoundRecorder
-    
 
 PRODUCT_NAME := slim_loganreltexx
 PRODUCT_DEVICE := loganreltexx
