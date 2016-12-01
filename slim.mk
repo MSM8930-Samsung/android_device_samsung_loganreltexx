@@ -21,6 +21,13 @@ $(call inherit-product, device/samsung/loganreltexx/loganreltexx.mk)
 # Inherit some common CM stuff.
 $(call inherit-product, vendor/slim/config/common_full_phone.mk)
 
+# Misc missing apps
+PRODUCT_PACKAGES += \
+    Browser \
+    Messaging \
+    SoundRecorder
+    
+
 PRODUCT_NAME := slim_loganreltexx
 PRODUCT_DEVICE := loganreltexx
 PRODUCT_BRAND := samsung
