@@ -37,8 +37,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
     persist.sys.wfd.virtual=0 \
     ro.sf.lcd_density=240 \
     ro.opengles.version=196608 \
-    ro.qualcomm.cabl=0 \
-    ro.hwui.text_large_cache_height=1024
+    ro.qualcomm.cabl=0
 
 # Camera
 PRODUCT_PROPERTY_OVERRIDES += \
@@ -62,24 +61,29 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 # Dalvik
 PRODUCT_PROPERTY_OVERRIDES += \
-    dalvik.vm.dex2oat-swap=false \
+    dalvik.vm.dex2oat-swap=true \
     ro.am.reschedule_service=true \
-    ro.sys.fw.dex2oat_thread_count=2 \
-    dalvik.vm.dex2oat-Xms=64m \
-    dalvik.vm.dex2oat-Xmx=384m
+    ro.sys.fw.dex2oat_thread_count=2
 
 # Our low-ram optimizations below
 
 # Art
 PRODUCT_PROPERTY_OVERRIDES += \
     dalvik.vm.dex2oat-flags=--no-watch-dog \
+    dalvik.vm.dex2oat-Xms=64m \
+    dalvik.vm.dex2oat-Xmx=384m \
+    dalvik.vm.dex2oat-threads=2
 
 # Low-RAM optimizations
 ADDITIONAL_BUILD_PROPERTIES += \
-	config.disable_atlas=true \
+    config.disable_atlas=true
 
 # Intel's VM tunable recommendations
 ADDITIONAL_BUILD_PROPERTIES += \
-	dalvik.vm.heapgrowthlimit=64m \
-	dalvik.vm.heapsize=174m \
-	dalvik.vm.heapmaxfree=2m
+    dalvik.vm.heapgrowthlimit=64m \
+    dalvik.vm.heapsize=174m \
+    dalvik.vm.heapmaxfree=2m
+     
+# OpenGLRenderer Optimizations
+ADDITIONAL_BUILD_PROPERTIES += \
+    ro.hwui.text_large_cache_height=1024
