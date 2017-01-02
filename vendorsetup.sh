@@ -1,1 +1,1 @@
-add_lunch_combo cm_loganreltexx-userdebug
+add_lunch_combo lineage_loganreltexx-userdebug
