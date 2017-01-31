@@ -1,4 +1,3 @@
-
 # Copyright (C) 2014 The CyanogenMod Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
@@ -98,3 +97,7 @@ BOARD_USES_QC_TIME_SERVICES := true
 
 # CMHW
 BOARD_HARDWARE_CLASS += device/samsung/loganreltexx/cmhw
+
+ifeq ($(WITH_TWRP),true)
+-include device/samsung/loganreltexx/twrp.mk
+endif
