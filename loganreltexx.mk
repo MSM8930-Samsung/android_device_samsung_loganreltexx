@@ -156,6 +156,10 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     libqcomvoiceprocessing
     
+# Gello
+PRODUCT_PACKAGES += \
+    Gello
+
 ifeq ($(WITH_TWRP),true)
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/rootdir/twrp.fstab:recovery/root/etc/twrp.fstab
