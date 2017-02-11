@@ -13,17 +13,13 @@
 # limitations under the License.
 
 BOARD_HAS_NO_REAL_SDCARD := true
-DEVICE_RESOLUTION := 480x800
-LZMA_RAMDISK_TARGETS := boot,recovery
+LZMA_RAMDISK_TARGETS := recovery
 RECOVERY_SDCARD_ON_DATA := true
 RECOVERY_VARIANT := twrp
+TARGET_RECOVERY_FSTAB := device/samsung/loganreltexx/rootdir/twrp.fstab
 TW_BRIGHTNESS_PATH := /sys/class/leds/lcd-backlight/brightness
-TW_EXTRA_LANGUAGES := false
 TW_HAS_DOWNLOAD_MODE := true
 TW_INCLUDE_CRYPTO := true
-TW_INCLUDE_FUSE_EXFAT := true
-TW_INCLUDE_FUSE_NTFS := true
-TW_MAX_BRIGHTNESS := 255
 TW_NO_REBOOT_BOOTLOADER := true
-TW_NO_USB_STORAGE := true
+TW_NO_USB_STORAGE := false
 TW_TARGET_USES_QCOM_BSP := true
