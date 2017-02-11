@@ -43,7 +43,8 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 # Camera
 PRODUCT_PROPERTY_OVERRIDES += \
-    camera2.portability.force_api=1
+    camera2.portability.force_api=1 \
+    camera.disable_zsl_mode=1
 
 # Misc
 PRODUCT_PROPERTY_OVERRIDES += \
@@ -53,9 +54,8 @@ PRODUCT_PROPERTY_OVERRIDES += \
     persist.timed.enable=true \
     wifi.interface=wlan0 \
     ro.qualcomm.bt.hci_transport=smd \
-    qcom.bluetooth.soc=smd \
-    ro.sys.sdcardfs=true \
-    camera.disable_zsl_mode=1
+    qcom.bluetooth.soc=smd
+
     
 # QC Perf
 PRODUCT_PROPERTY_OVERRIDES += \
