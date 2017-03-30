@@ -68,9 +68,6 @@ BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := device/samsung/loganreltexx/bluet
 # Charger
 BOARD_NO_CHARGER_LED := true
 
-# Audio
-USE_CUSTOM_AUDIO_POLICY := 1
-
 # Needed for LPA
 BOARD_GLOBAL_CFLAGS += -DLPA_DEFAULT_BUFFER_SIZE=32
 
