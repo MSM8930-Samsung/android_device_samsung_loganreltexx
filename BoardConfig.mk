@@ -42,6 +42,7 @@ TARGET_BOOTLOADER_BOARD_NAME := MSM8960
 TARGET_OTA_ASSERT_DEVICE := loganreltexx,loganrelte,GT-S7275R,GT-S7275B,GT-S7275T
 
 # Recovery
+LZMA_RAMDISK_TARGETS := recovery
 TARGET_RECOVERY_FSTAB := device/samsung/loganreltexx/rootdir/fstab.qcom
 
 # Filesystem
