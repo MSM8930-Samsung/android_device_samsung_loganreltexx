@@ -1,7 +1,3 @@
-# Set composition for USB
-PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
-    persist.sys.usb.config=mtp
-
 # RIL
 PRODUCT_PROPERTY_OVERRIDES += \
     rild.libpath=/system/lib/libsec-ril.so \
