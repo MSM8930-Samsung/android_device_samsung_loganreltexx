@@ -145,8 +145,7 @@ PRODUCT_PACKAGES += \
 
 # Shims
 PRODUCT_PACKAGES += \
-    libshim_ril \
-    libshim_wvm
+    libshim_ril
 
 # Doze
 PRODUCT_PACKAGES += \
