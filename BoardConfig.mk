@@ -45,6 +45,9 @@ TARGET_OTA_ASSERT_DEVICE := loganreltexx,loganrelte,GT-S7275R,GT-S7275B,GT-S7275
 LZMA_RAMDISK_TARGETS := recovery
 TARGET_RECOVERY_FSTAB := device/samsung/loganreltexx/rootdir/fstab.qcom
 
+# Lights		
+TARGET_PROVIDES_LIBLIGHT := true
+
 # Filesystem
 TARGET_USERIMAGES_USE_EXT4 := true
 TARGET_USERIMAGES_USE_F2FS := true
