@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+
     <bool name="def_bluetooth_on">false</bool>
-    <bool name="def_install_non_market_apps">true</bool>
     <bool name="def_screen_brightness_automatic_mode">false</bool>
     
     <!-- Time format,default vlaue is 24 : 24 format,other value is 12 format -->
@@ -9,4 +9,5 @@
 
     <!-- Date format,yyyy-MM-dd: 2013/07/30; MM-dd-yyyy:07/30/2013; dd-MM-yyyy:30/07/2013 -->
     <string name="def_date_format" translatable="false">dd-MM-yyyy</string>
+
 </resources>
