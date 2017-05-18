@@ -252,6 +252,9 @@
 
     <string translatable="false" name="config_radio_access_family">GSM|WCDMA|LTE</string>
 
+    <!-- If supported, are dreams enabled? (by default) -->
+    <bool name="config_dreamsEnabledByDefault">false</bool>
+
     <!-- Ambient display. -->
     <integer name="config_screenBrightnessDoze">30</integer>
     <string name="config_dozeComponent">com.android.systemui/com.android.systemui.doze.DozeService</string>
