@@ -50,8 +50,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
 # Misc
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.chipname=MSM8930 \
-    ro.product_ship=true \
-    ro.warmboot.capability=1 \
     persist.timed.enable=true \
     wifi.interface=wlan0
 
