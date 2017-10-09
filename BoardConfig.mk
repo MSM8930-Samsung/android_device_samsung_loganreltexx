@@ -21,7 +21,10 @@
 # definition file).
 #
 
-# inherit from common msm8930
+COMMON_PATH := device/samsung/loganreltexx
+
+# Inherit from common msm8930
+
 -include device/samsung/msm8930-common/BoardConfigCommon.mk
 
 # Kernel
@@ -41,7 +44,7 @@ TARGET_OTA_ASSERT_DEVICE := loganreltexx,loganrelte,GT-S7275R,GT-S7275B,GT-S7275
 
 # Recovery
 LZMA_RAMDISK_TARGETS := recovery
-TARGET_RECOVERY_FSTAB := device/samsung/loganreltexx/rootdir/fstab.qcom
+TARGET_RECOVERY_FSTAB := $(COMMON_PATH)/rootdir/fstab.qcom
 
 # Lights		
 TARGET_PROVIDES_LIBLIGHT := true
@@ -59,7 +62,7 @@ BOARD_CACHEIMAGE_PARTITION_SIZE := 209715200
 BOARD_FLASH_BLOCK_SIZE := 131072
 
 # Bluetooth
-BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := device/samsung/loganreltexx/bluetooth
+BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := $(COMMON_PATH)/bluetooth
 
 # NFC
 #BOARD_HAVE_NFC := true
@@ -96,8 +99,8 @@ BOARD_RIL_CLASS := ../../../device/samsung/loganreltexx/ril/
 BOARD_USES_QC_TIME_SERVICES := true
 
 # CMHW
-BOARD_HARDWARE_CLASS += device/samsung/loganreltexx/cmhw
+BOARD_HARDWARE_CLASS += $(COMMON_PATH)/cmhw
 
 ifeq ($(WITH_TWRP),true)
--include device/samsung/loganreltexx/twrp.mk
+-include $(COMMON_PATH)/twrp.mk
 endif
