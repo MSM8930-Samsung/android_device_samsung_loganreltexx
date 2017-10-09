@@ -142,8 +142,8 @@
             32 - Camera
             64 - Volume rocker
          For example, a device with Home, Back and Menu keys would set this
-         config to 7. -->
-    <integer name="config_deviceHardwareKeys">71</integer>
+         config to 7.
+    <integer name="config_deviceHardwareKeys">71</integer> -->
 
     <!-- Hardware keys present on the device with the ability to wake, stored as a bit field.
          This integer should equal the sum of the corresponding value for each
@@ -156,8 +156,8 @@
             32 - Camera
             64 - Volume rocker
          For example, a device with Home, Back and Menu keys would set this
-         config to 7. -->
-    <integer name="config_deviceHardwareWakeKeys">65</integer>
+         config to 7.
+    <integer name="config_deviceHardwareWakeKeys">65</integer> -->
 
     <!-- When the screen is turned on, the previous estimate of the ambient light level at the time
          the screen was turned off is restored and is used to determine the initial screen
