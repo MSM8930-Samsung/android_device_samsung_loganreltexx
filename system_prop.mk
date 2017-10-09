@@ -5,9 +5,8 @@ PRODUCT_PROPERTY_OVERRIDES += \
     telephony.lteOnGsmDevice=1 \
     ro.telephony.default_network=3 \
     ro.com.android.mobiledata=false \
-    ro.telephony.ril_class=LoganreRIL \
-    ro.ril.telephony.mqanelements=6 \
-    persist.radio.add_power_save=1
+    persist.radio.add_power_save=1 \
+    persist.radio.apm_sim_not_pwdn=1
 
 # GPS
 PRODUCT_PROPERTY_OVERRIDES += \
