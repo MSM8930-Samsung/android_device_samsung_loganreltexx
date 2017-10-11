@@ -126,6 +126,11 @@ PRODUCT_PACKAGES += \
     FM2 \
     qcom.fmradio
 
+# GPS HAL
+PRODUCT_PACKAGES += \
+    gps.msm8960 \
+    gps.conf
+
 # Lights
 PRODUCT_PACKAGES += \
     android.hardware.light@2.0-impl \

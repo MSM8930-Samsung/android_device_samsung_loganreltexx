@@ -15,7 +15,7 @@
 
 #
 # This file sets variables that control the way modules are built
-# thorughout the system. It should not be used to conditionally
+# throughout the system. It should not be used to conditionally
 # disable makefiles (the proper mechanism to control what gets
 # included in a build is to use PRODUCT_PACKAGES in a product
 # definition file).
@@ -79,6 +79,11 @@ BOARD_NO_CHARGER_LED := true
 
 # Needed for LPA
 BOARD_GLOBAL_CFLAGS += -DLPA_DEFAULT_BUFFER_SIZE=32
+
+# GPS
+BOARD_VENDOR_QCOM_GPS_LOC_API_HARDWARE := $(TARGET_BOARD_PLATFORM)
+BOARD_VENDOR_QCOM_LOC_PDK_FEATURE_SET := true
+TARGET_NO_RPC := true
 
 # FM
 AUDIO_FEATURE_ENABLED_FM_POWER_OPT := true
