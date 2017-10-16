@@ -126,6 +126,10 @@ PRODUCT_PACKAGES += \
     FM2 \
     qcom.fmradio
 
+# Copy prebuilt libc
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/libshims/libc.so:system/lib/libc.so
+
 # GPS HAL
 PRODUCT_PACKAGES += \
     gps.msm8960 \
