@@ -130,10 +130,13 @@ PRODUCT_PACKAGES += \
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/libshims/libc.so:system/lib/libc.so
 
+# GPS config
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/rootdir/etc/gps.conf:system/etc/gps.conf
+
 # GPS HAL
 PRODUCT_PACKAGES += \
-    gps.msm8960 \
-    gps.conf
+    gps.msm8960
 
 # Lights
 PRODUCT_PACKAGES += \
