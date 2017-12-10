@@ -126,7 +126,7 @@ PRODUCT_PACKAGES += \
     
 # Vibrator 
 PRODUCT_PACKAGES += \ 
-    android.hardware.vibrator@1.0-impl 
+    android.hardware.vibrator@1.0-impl
 
 # IPv6 tethering
 PRODUCT_PACKAGES += \
