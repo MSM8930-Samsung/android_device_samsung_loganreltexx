@@ -125,8 +125,9 @@ PRODUCT_PACKAGES += \
     lights.msm8960
     
 # Vibrator 
-PRODUCT_PACKAGES += \ 
+PRODUCT_PACKAGES += \
     android.hardware.vibrator@1.0-impl
+
 
 # IPv6 tethering
 PRODUCT_PACKAGES += \
