@@ -99,8 +99,6 @@
 /dev/hw_random            0660   system     system
 /dev/graphics/*           0660   system     graphics
 /dev/tun                  0660   system     vpn
-/dev/pn544                0660   nfc        nfc
-/dev/pn547                0660   nfc        nfc
 
 # permissions for audio
 /dev/msm_qcelp            0660   system     audio
