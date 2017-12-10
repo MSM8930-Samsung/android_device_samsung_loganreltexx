@@ -61,22 +61,22 @@ PRODUCT_PROPERTY_OVERRIDES += \
 # Our low-ram optimizations below
 
 # Art
-PRODUCT_PROPERTY_OVERRIDES += \
-    dalvik.vm.dex2oat-flags=--no-watch-dog \
-    dalvik.vm.dex2oat-Xms=64m \
-    dalvik.vm.dex2oat-Xmx=384m \
-    dalvik.vm.dex2oat-threads=2
+#PRODUCT_PROPERTY_OVERRIDES += \
+#    dalvik.vm.dex2oat-flags=--no-watch-dog \
+#    dalvik.vm.dex2oat-Xms=64m \
+#   dalvik.vm.dex2oat-Xmx=384m \
+#    dalvik.vm.dex2oat-threads=2
 
 # Low-RAM optimizations
-ADDITIONAL_BUILD_PROPERTIES += \
-    config.disable_atlas=true
+#ADDITIONAL_BUILD_PROPERTIES += \
+#    config.disable_atlas=true
 
 # Intel's VM tunable recommendations
-ADDITIONAL_BUILD_PROPERTIES += \
-    dalvik.vm.heapgrowthlimit=64m \
-    dalvik.vm.heapsize=174m \
-    dalvik.vm.heapmaxfree=2m
+#ADDITIONAL_BUILD_PROPERTIES += \
+#    dalvik.vm.heapgrowthlimit=64m \
+#    dalvik.vm.heapsize=174m \
+#    dalvik.vm.heapmaxfree=2m
      
 # OpenGLRenderer Optimizations
-ADDITIONAL_BUILD_PROPERTIES += \
-    ro.hwui.text_large_cache_height=1024
+#ADDITIONAL_BUILD_PROPERTIES += \
+#    ro.hwui.text_large_cache_height=1024
