@@ -158,6 +158,9 @@ PRODUCT_PACKAGES += \
 # call common loganre system props
 $(call inherit-product, device/samsung/loganreltexx/system_prop.mk)
 
+# call common loganre system debug props
+$(call inherit-product, device/samsung/loganreltexx/system_prop_debug.mk)
+
 # call common msm8930
 $(call inherit-product, device/samsung/msm8930-common/msm8930.mk)
 
