@@ -1,7 +1,6 @@
 # RIL
 PRODUCT_PROPERTY_OVERRIDES += \
     rild.libpath=/system/vendor/lib/libril-qc-qmi-1.so \
-    telephony.lteOnGsmDevice=1 \
     ro.telephony.default_network=3 \
     ro.com.android.mobiledata=false \
     persist.radio.add_power_save=1 \
