@@ -106,19 +106,12 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/rootdir/vendor/etc/thermald.conf:$(TARGET_COPY_OUT_VENDOR)/etc/thermald.conf
 
-<<<<<<< HEAD:loganreltexx.mk
 # FM radio
 PRODUCT_PACKAGES += \
     android.hardware.broadcastradio@1.0-impl \
     FM2 \
     qcom.fmradio
 
-# Copy prebuilt libc
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/libshims/libc.so:system/lib/libc.so
-
-=======
->>>>>>> 7462c38... serrano-common: Remove prebuilt libc.so:serrano-common.mk
 # GPS config
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/rootdir/etc/gps.conf:system/etc/gps.conf
@@ -129,16 +122,15 @@ PRODUCT_PACKAGES += \
 
 # Lights
 PRODUCT_PACKAGES += \
-    android.hardware.light@2.0-impl \
-    lights.msm8960
-    
-# Vibrator 
+    android.hardware.light@2.0-service.loganre
+
+# Vibrator
 PRODUCT_PACKAGES += \
-    android.hardware.vibrator@1.0-service.serrano
+    android.hardware.vibrator@1.0-service.loganre
 
 # USB
 PRODUCT_PACKAGES += \
-    android.hardware.usb@1.0-service.serrano
+    android.hardware.usb@1.0-service.loganre
 
 # Power
 PRODUCT_PACKAGES += \
