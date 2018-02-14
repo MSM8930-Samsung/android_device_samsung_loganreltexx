@@ -106,6 +106,7 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/rootdir/vendor/etc/thermald.conf:$(TARGET_COPY_OUT_VENDOR)/etc/thermald.conf
 
+<<<<<<< HEAD:loganreltexx.mk
 # FM radio
 PRODUCT_PACKAGES += \
     android.hardware.broadcastradio@1.0-impl \
@@ -116,6 +117,8 @@ PRODUCT_PACKAGES += \
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/libshims/libc.so:system/lib/libc.so
 
+=======
+>>>>>>> 7462c38... serrano-common: Remove prebuilt libc.so:serrano-common.mk
 # GPS config
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/rootdir/etc/gps.conf:system/etc/gps.conf
