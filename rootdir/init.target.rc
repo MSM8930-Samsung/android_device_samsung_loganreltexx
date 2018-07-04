@@ -57,8 +57,8 @@ on fs
     swapon_all fstab.qcom
     wait /dev/block/platform/${ro.boot.bootdevice}
     symlink /dev/block/platform/${ro.boot.bootdevice} /dev/block/bootdevice
-	
-	mount_all fstab.qcom
+
+    mount_all fstab.qcom
 
     restorecon_recursive /persist
 
@@ -87,10 +87,6 @@ on post-fs-data
 
     chown system system /dev/tzic
 
-    # Create directory for ril data 	
-    mkdir /data/misc/radio 0775 radio radio 	
-    mkdir /data/misc/radio/hatp 0775 radio system 	
-
     # h2k permission
     chmod 0644 /efs/redata.bin
 
@@ -111,8 +107,6 @@ on post-fs-data
     # Sensors
     write /sys/class/input/input4/distortion "400 50 15"
     write /sys/class/input/input5/distortion "400 50 15"
-    write /sys/class/input/input6/distortion "400 50 15"
-    write /sys/class/input/input7/distortion "400 50 15"
 
     # Sensor - soft iron
     write /sys/class/input/input4/static_matrix "9665 -302 -5 -268 10196 146 83 645 10159"
@@ -133,16 +127,6 @@ on post-fs-data
     chown system input /sys/class/input/input3/gyro_enable
     chown system input /sys/class/input/input3/gyro_delay
     chown system input /sys/class/input/input3/self_test
-    chown system input /sys/class/input/input4/acc_enable
-    chown system input /sys/class/input/input4/acc_delay
-    chown system input /sys/class/input/input4/gyro_enable
-    chown system input /sys/class/input/input4/gyro_delay
-    chown system input /sys/class/input/input4/self_test
-    chown system input /sys/class/input/input5/acc_enable
-    chown system input /sys/class/input/input5/acc_delay
-    chown system input /sys/class/input/input5/gyro_enable
-    chown system input /sys/class/input/input5/gyro_delay
-    chown system input /sys/class/input/input5/self_test
 
     # geomagnetic
     chown system input /sys/class/input/input3/enable
@@ -161,22 +145,6 @@ on post-fs-data
     chown system input /sys/class/input/input4/status
     chown system input /sys/class/input/input4/wake
     chown system input /sys/class/input/input4/position
-    chown system input /sys/class/input/input5/enable
-    chown system input /sys/class/input/input5/delay
-    chown system input /sys/class/input/input5/filter_enable
-    chown system input /sys/class/input/input5/filter_len
-    chown system input /sys/class/input/input5/data
-    chown system input /sys/class/input/input5/status
-    chown system input /sys/class/input/input5/wake
-    chown system input /sys/class/input/input5/position
-    chown system input /sys/class/input/input6/enable
-    chown system input /sys/class/input/input6/delay
-    chown system input /sys/class/input/input6/filter_enable
-    chown system input /sys/class/input/input6/filter_len
-    chown system input /sys/class/input/input6/data
-    chown system input /sys/class/input/input6/status
-    chown system input /sys/class/input/input6/wake
-    chown system input /sys/class/input/input6/position
 
     # geomagnetic_raw
     chown compass input /sys/class/input/input4/offsets
@@ -191,37 +159,16 @@ on post-fs-data
     chown system input /sys/class/input/input5/distortion
     chown system input /sys/class/input/input5/shape
     chown system input /sys/class/input/input5/self_test
-    chown compass input /sys/class/input/input6/offsets
-    chown compass input /sys/class/input/input6/dynamic_matrix
-    chown system input /sys/class/input/input6/threshold
-    chown system input /sys/class/input/input6/distortion
-    chown system input /sys/class/input/input6/shape
-    chown compass input /sys/class/input/input7/offsets
-    chown compass input /sys/class/input/input7/dynamic_matrix
-    chown system input /sys/class/input/input7/threshold
-    chown system input /sys/class/input/input7/distortion
-    chown system input /sys/class/input/input7/shape
-    chown compass input /sys/class/input/input8/offsets
-    chown compass input /sys/class/input/input8/dynamic_matrix
-    chown system input /sys/class/input/input8/threshold
-    chown system input /sys/class/input/input8/distortion
-    chown system input /sys/class/input/input8/shape
 
     # proximity_sensor
     chown system input /sys/class/input/input5/enable
     chown system input /sys/class/input/input6/enable
-    chown system input /sys/class/input/input7/enable
-    chown system input /sys/class/input/input8/enable
 
     # light_sensor
     chown system input /sys/class/input/input6/enable
     chown system input /sys/class/input/input6/poll_delay
     chown system input /sys/class/input/input7/enable
     chown system input /sys/class/input/input7/poll_delay
-    chown system input /sys/class/input/input8/enable
-    chown system input /sys/class/input/input8/poll_delay
-    chown system input /sys/class/input/input9/enable
-    chown system input /sys/class/input/input9/poll_delay
 
     # Accelerometer_sensor
     chown system radio /sys/class/sensors/accelerometer_sensor/raw_data
@@ -250,7 +197,7 @@ on post-fs-data
     chown system radio /sys/class/sensors/proximity_sensor/thresh_low
     chown system radio /sys/class/sensors/proximity_sensor/barcode_emul_en
 
-    # Light_sensor    
+    # Light_sensor
     chown system radio /sys/class/sensors/light_sensor/lux
     chown system radio /sys/class/sensors/light_sensor/raw_data
     chown system radio /sys/class/sensors/light_sensor/vendor
@@ -328,10 +275,6 @@ on post-fs-data
     chown system system /sys/class/sec/led/led_blink
     chown system system /sys/class/sec/led/led_lowpower
 
-    # Permissions for NCM 	
-    chmod 0660 /sys/class/android_usb/android0/terminal_version 	
-    chown system system /sys/class/android_usb/android0/terminal_version
-
     # MDNIE
     chown system system  /sys/class/mdnie/mdnie/lcdtype
     chown system system  /sys/class/mdnie/mdnie/lcd_power
@@ -347,9 +290,9 @@ on post-fs-data
     chown system media_rw /sys/class/mdnie/mdnie/accessibility
     chown system system /sys/class/mdnie/mdnie/cabc
     chown radio system /sys/class/lcd/panel/siop_enable
-    chown radio system  /sys/class/lcd/panel/temperature
+    chown radio system /sys/class/lcd/panel/temperature
 
-# Auto Brightness
+    # Auto Brightness
     chown system system /sys/class/backlight/panel/auto_brightness
     chmod 0660 /sys/class/backlight/panel/auto_brightness
 
@@ -357,15 +300,14 @@ on post-fs-data
     chown radio system /sys/class/lcd/panel/fps_change
     chmod 0664 /sys/class/lcd/panel/fps_change
 
-# Permission for Touchscreen, Touchkey.
-    chown system system /sys/class/sec/sec_touchkey/brightness
+    # Permission for Touchscreen, Touchkey.
     chown radio system /sys/class/sec/sec_touchkey/touch_sensitivity
     chown radio system /sys/class/sec/sec_touchkey/touchkey_firm_update
     chown system radio /sys/class/sec/tsp/cmd
     chown system radio /sys/class/sec/sec_touchkey/glove_mode
     chown system radio /sys/class/sec/sec_touchkey/flip_mode
 
-# Permissions for Camera
+    # Permissions for Camera
     chown system radio /sys/class/camera/rear/rear_camfw
     chown system radio /sys/class/camera/rear/rear_camtype
     chown system media_rw /sys/class/camera/rear/rear_checkApp
@@ -440,13 +382,13 @@ on post-fs-data
     chown radio system /sys/class/power_supply/battery/siop_level
     chown radio system /sys/class/power_supply/battery/test_charge_current
 
-# Permissions for Barcode Emul
+    # Permissions for Barcode Emul
     chown system radio /sys/class/sec/sec_barcode_emul/barcode_send
     chown system radio /sys/class/sec/sec_barcode_emul/barcode_ver_check
     chown system radio /sys/class/sec/sec_barcode_emul/barcode_led_status
 
     # Permission for HALL IC
-    chown system radio /sys/class/sec/sec_key/hall_detect
+    chown system system /sys/class/sec/sec_key/hall_detect
 
     # Permission for fast dormacy for RIL
     chown system radio /sys/devices/virtual/sec/bamdmux/waketime
@@ -459,6 +401,10 @@ on post-fs-data
     chown system system /sys/devices/virtual/graphics/fb0/rgb
     chmod 0660 /sys/devices/virtual/graphics/fb0/rgb
 
+    # Touchkey
+    chown system system /sys/class/sec/sec_touchkey/touchkey_enable
+    chmod 0660 /sys/class/sec/sec_touchkey/touchkey_enable
+
 # Start camera server as daemon
 service qcamerasvr /system/vendor/bin/mm-qcamera-daemon
     class late_start
@@ -469,7 +415,6 @@ service thermald /system/vendor/bin/thermald
     class main
     user root
     group radio system
-
 
 service mpdecision /system/vendor/bin/mpdecision --no_sleep --avg_comp
     class main
