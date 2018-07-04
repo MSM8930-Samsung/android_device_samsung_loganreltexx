@@ -1,7 +1,7 @@
 cc_binary {
-    name: "android.hardware.light@2.0-service.serrano",
+    name: "android.hardware.light@2.0-service.loganre",
     relative_install_path: "hw",
-    init_rc: ["android.hardware.light@2.0-service.serrano.rc"],
+    init_rc: ["android.hardware.light@2.0-service.loganre.rc"],
     srcs: ["service.cpp", "Light.cpp"],
     shared_libs: [
         "libcutils",

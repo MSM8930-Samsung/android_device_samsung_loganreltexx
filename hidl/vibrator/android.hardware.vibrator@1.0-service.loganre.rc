@@ -1,4 +1,4 @@
-service vibrator-1-0 /vendor/bin/hw/android.hardware.vibrator@1.0-service.serrano
+service vibrator-1-0 /vendor/bin/hw/android.hardware.vibrator@1.0-service.loganre
     class hal
     user system
     group system

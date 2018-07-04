@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-#define LOG_TAG "android.hardware.vibrator@1.0-service.serrano"
+#define LOG_TAG "android.hardware.vibrator@1.0-service.loganre"
 
 #include <android/hardware/vibrator/1.0/IVibrator.h>
 #include <hidl/HidlSupport.h>
