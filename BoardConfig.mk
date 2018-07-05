@@ -21,18 +21,23 @@
 # definition file).
 #
 
+# Assert
+TARGET_OTA_ASSERT_DEVICE := loganreltexx,loganrelte,GT-S7275R,GT-S7275B,GT-S7275T
+
 COMMON_PATH := device/samsung/loganreltexx
 
 # Inherit from common msm8930
-
 -include device/samsung/msm8930-common/BoardConfigCommon.mk
+
+# Inherit from proprietary vendor
+-include vendor/samsung/loganreltexx/BoardConfigVendor.mk
 
 # HIDL
 DEVICE_MANIFEST_FILE := $(COMMON_PATH)/manifest.xml
 DEVICE_MATRIX_FILE := $(COMMON_PATH)/compatibility_matrix.xml
 
 # Kernel
-BOARD_KERNEL_CMDLINE := androidboot.hardware=qcom androidboot.memcg=true user_debug=22 zcache msm_rtb.filter=0x3F ehci-hcd.park=3 androidboot.bootdevice=msm_sdcc.1
+BOARD_KERNEL_CMDLINE := androidboot.hardware=qcom androidboot.memcg=true user_debug=22 msm_rtb.filter=0x3F ehci-hcd.park=3 androidboot.bootdevice=msm_sdcc.1
 BOARD_KERNEL_CMDLINE += androidboot.selinux=permissive
 BOARD_KERNEL_BASE := 0x80200000
 BOARD_KERNEL_IMAGE_NAME := zImage
@@ -44,9 +49,6 @@ TARGET_KERNEL_VARIANT_CONFIG := msm8930_loganre_eur_lte_defconfig
 
 # Bootloader
 TARGET_BOOTLOADER_BOARD_NAME := MSM8960
-
-# Assert
-TARGET_OTA_ASSERT_DEVICE := loganreltexx,loganrelte,GT-S7275R,GT-S7275B,GT-S7275T
 
 # Recovery
 LZMA_RAMDISK_TARGETS := recovery
@@ -69,12 +71,6 @@ BOARD_FLASH_BLOCK_SIZE := 131072
 
 # Bluetooth
 BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := $(COMMON_PATH)/bluetooth
-
-# Charger
-BOARD_NO_CHARGER_LED := true
-
-# Needed for LPA
-BOARD_GLOBAL_CFLAGS += -DLPA_DEFAULT_BUFFER_SIZE=32
 
 # GPS
 BOARD_VENDOR_QCOM_GPS_LOC_API_HARDWARE := $(TARGET_BOARD_PLATFORM)

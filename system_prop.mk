@@ -26,12 +26,12 @@ PRODUCT_PROPERTY_OVERRIDES += \
     persist.sys.wfd.virtual=0 \
     ro.sf.lcd_density=240 \
     ro.opengles.version=196608 \
-    ro.qualcomm.cabl=0
+    ro.qualcomm.cabl=0 \
+    ro.hwui.text_large_cache_height=2048
 
 # Camera
 PRODUCT_PROPERTY_OVERRIDES += \
-    camera2.portability.force_api=1 \
-    camera.disable_zsl_mode=1
+    camera2.portability.force_api=1
 
 # Bluetooth
 PRODUCT_PROPERTY_OVERRIDES += \
@@ -46,14 +46,13 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.chipname=MSM8930 \
     wifi.interface=wlan0
 
-    
 # QC Perf
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.vendor.extension_library=libqti-perfd-client.so
 
 # Dalvik
 PRODUCT_PROPERTY_OVERRIDES += \
-    dalvik.vm.dex2oat-swap=true \
+    dalvik.vm.dex2oat-swap=false \
     ro.am.reschedule_service=true
 
 # Vendor security patch level

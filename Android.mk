@@ -21,8 +21,10 @@
 
 LOCAL_PATH := $(call my-dir)
 
-$(shell mkdir -p out/target/product/loganreltexx/obj/KERNEL_OBJ/drivers/thermal/intelli)
-
-ifeq ($(TARGET_DEVICE), loganreltexx)
-include $(call all-makefiles-under,$(LOCAL_PATH))
+ifeq ($(BOARD_VENDOR),samsung)
+ifeq ($(TARGET_BOARD_PLATFORM),msm8960)
+ifneq ($(filter loganreltexx,$(TARGET_DEVICE)),)
+include $(call all-subdir-makefiles,$(LOCAL_PATH))
+endif
+endif
 endif
